@@ -1,0 +1,3 @@
+import { AppShell } from "../components/app-shell";
+import { EmptyState, PageHeader } from "../components/page-primitives";
+export default function RemindersPage() { return <AppShell active="/reminders"><PageHeader eyebrow="Stay on track" title="Reminders" description="Gentle prompts for the things you meant to pick up or use." /><div className="surface"><EmptyState icon="◷" title="You are all caught up" description="New reminders will appear here when something needs your attention." /></div></AppShell>; }

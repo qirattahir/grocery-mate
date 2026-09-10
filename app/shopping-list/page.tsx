@@ -1,0 +1,6 @@
+import { AppShell } from "../components/app-shell";
+import { GroceryItem } from "../components/grocery-item";
+import { EmptyState, PageHeader } from "../components/page-primitives";
+import Link from "next/link";
+
+export default function ShoppingListPage() { return <AppShell active="/shopping-list"><PageHeader eyebrow="Plan ahead" title="Grocery list" description="Keep the next shop simple with everything you mean to pick up." action={{ href: "/shopping-list/add", label: "Add item" }} /><div className="surface list-summary"><span>8 items to buy</span><strong>2</strong><span>categories</span></div><div className="surface list-surface"><GroceryItem name="Baby spinach" quantity="1 bag" category="Produce" /><GroceryItem name="Whole grain bread" quantity="1 loaf" category="Bakery" /><GroceryItem name="Greek yogurt" quantity="2 tubs" category="Dairy" /><EmptyState icon="＋" title="Add the rest of your list" description="This is a preview of your planning space. Adding and editing items will come in the next phase." action={{ href: "/shopping-list/add", label: "Add an item" }} /></div><Link className="button button-secondary list-add-link" href="/shopping-list/add">Add another item</Link></AppShell>; }

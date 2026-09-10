@@ -1,0 +1,3 @@
+import { AppShell } from "../components/app-shell";
+import { EmptyState, PageHeader } from "../components/page-primitives";
+export default function HistoryPage() { return <AppShell active="/history"><PageHeader eyebrow="Look back" title="Shopping history" description="Your completed shops will live here, so patterns are easier to spot." /><div className="surface"><EmptyState icon="◷" title="No shopping trips yet" description="Once a shop is complete, you will see the date, store, items, and total here." /></div></AppShell>; }
